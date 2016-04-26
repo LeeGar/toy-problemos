@@ -12,6 +12,8 @@ which then the function will execute without splitting to O(log(n)) time
 
 function swap (array, left, right) {
 	var temp = array[left];
+	//console.log('before swap left: ', temp)
+	//console.log('before swap right: ', array[right])
 	array[left] = array[right];
 	array[right] = temp;
 };
@@ -47,6 +49,8 @@ function quickSort (array, left, right) {
 
 	//Get the index from partition
 	var index = partition(array, left, right);
+
+	//console.log('index: ', index, 'left: ', left, 'right: ', right);
 
 	if (array.length > 1) {
 		//If left is LESS than the current index, recursively call again with a decreased right pointer
