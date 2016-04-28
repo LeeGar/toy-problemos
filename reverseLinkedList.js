@@ -6,18 +6,18 @@ function linkedList (val) {
 };
 
 //Iterative solution
-// var reverseList = function (list) {
-// 	var current = list;
-// 	var previous = null;
+var reverseList = function (list) {
+	var current = list;
+	var previous = null;
 
-// 	while (current) {
-// 		var nextLink = current.next;
-// 		current.next = previous;
-// 		previous = current;
-// 		current = nextLink;
-// 	}
-// 	return previous
-// };
+	while (current) {
+		var nextLink = current.next;
+		current.next = previous;
+		previous = current;
+		current = nextLink;
+	}
+	return previous
+};
 
 
 //Recursive Solution

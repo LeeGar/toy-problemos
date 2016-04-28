@@ -3,7 +3,6 @@ function Tree (val) {
 	this.left = this.right = null;
 };
 
-
 function horizontalSum (tree) {
 	var hashMap = {};
 	var results = [];
@@ -28,7 +27,6 @@ function horizontalSum (tree) {
 	traverse(tree.left, tree.right, 1);
 	return hashMap
 };
-
 
 var top = new Tree(1);
 top.left = new Tree(2);
