@@ -36,3 +36,13 @@ def convert_bst_doubly_LL(root):
     first_node.prev = last_node
  
     return first_node
+
+
+def f(n):
+    if n <= 0:
+        return 0
+    return n + f(int(n/2))
+
+x = f(4)
+
+print x
