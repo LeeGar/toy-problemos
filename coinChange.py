@@ -25,8 +25,10 @@ class Solution(object):
         elif len(coins_available) == 0:
         	pass
         else:
+        	#Recursive call for all coins, using first available coin in each call
         	for coin in self.coinChange(coins_available[:], coins_used+[coins_available[0]], amount):
         		yield coin
+        	#Recursive call to pop out each first coin and resend through
         	for coin in self.coinChange(coins_available[1:], coins_used, amount):
         		yield coin
 
