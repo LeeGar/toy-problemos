@@ -3,28 +3,42 @@ function Tree(val) {
   this.left = this.right = null;
 };
 
-function doubleLinkedList (val) {
-	this.val = val;
-	this.prev = this.next = null;
+Tree.prototype.insert = function (value) {
+
+	if (value > this.val) {
+		if (!this.right) {
+			this.right = new Tree(value);
+		} else {
+			
+			//continue going down the tree until u can find a way to insert 
+		}
+	}
+	if (value < this.val) {
+		if (!this.left) {
+			this.left = new Tree(value);
+		} else {
+
+			//continue going down until u can find left node to insert on
+		}
+	}
+
 };
 
-//Use Breadth-first search to traverse the tree for manipulation
-
-function treeToList (root) {
-	if (root === null) {
-		return null;
-	};
-
-	treeToList(root.left)
+Tree.prototype.remove = function (value) {
 
 };
 
 
-var top = new Tree(1);
-top.left = new Tree(2);
-top.right = new Tree(5);
-top.left.left = new Tree(3);
-top.left.right = new Tree(4);
-top.right.right = new Tree(6);
+function rotate (node) {
 
-console.log(treeToList(top))
+};
+
+
+
+var newTree = new Tree(1);
+newTree.insert(2);
+newTree.insert(3);
+newTree.insert(4);
+newTree.insert(5);
+
+console.log('newTree finished: ', newTree);
